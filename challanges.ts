@@ -40,3 +40,25 @@ const map = (array: number[], addTwo: AddTwoFunction): number[] => {
   return array.map(addTwo);
 };
 console.log(map([1, 2, 3], addTwo));
+
+// Challenge 4 Done ✔️
+/* 
+The function forEach takes an array and a callback, and runs the callback on each element of the array. 
+forEach does not return anything.
+*/
+type CallbackType = (char: string) => void;
+
+const forEach = (array: string[], callback: CallbackType) => {
+  for (let i = 0; i < array.length; i++) {
+    callback(array[i]);
+  }
+};
+
+let alphabet = "";
+const letters = ["a", "b", "c", "d"];
+forEach(letters, function (char: string) {
+  alphabet += char;
+});
+console.log(alphabet);
+
+// should output abcd
