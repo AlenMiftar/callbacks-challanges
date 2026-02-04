@@ -24,3 +24,19 @@ const addS = (input: string) => {
 };
 console.log(addS("pizza"));
 console.log(addS("bagel"));
+
+// Challenge 3 Done ✔️
+/* 
+Create a function called map that takes two inputs:
+1. An array of numbers (a list of numbers)
+2. A 'callback' function - a function that is applied to each element of the array (inside of the function 'map')
+Have map return a new array filled with numbers that are the result of using the 'callback' function on each element of the input array.
+*/
+//console.log(map([1, 2, 3], addTwo));
+
+type AddTwoFunction = (input: number) => number;
+
+const map = (array: number[], addTwo: AddTwoFunction): number[] => {
+  return array.map(addTwo);
+};
+console.log(map([1, 2, 3], addTwo));
