@@ -47,7 +47,7 @@ The function forEach takes an array and a callback, and runs the callback on eac
 forEach does not return anything.
 */
 type CallbackType = (char: string) => void;
-
+type ForEachType = (array: string[], callback: CallbackType) => void;
 const forEach = (array: string[], callback: CallbackType) => {
   for (let i = 0; i < array.length; i++) {
     callback(array[i]);
@@ -62,3 +62,14 @@ forEach(letters, function (char: string) {
 console.log(alphabet);
 
 // should output abcd
+
+// Challenge 5
+/* 
+Rebuild your map function, this time instead of using a for loop, use your own forEach function that you just defined. 
+Call this new function mapWith.//console.log(mapWith([1, 2, 3], addTwo));
+*/
+
+const mapWith = (array: number[], forEach: any): number[] => {
+  return array.map(forEach);
+};
+console.log(mapWith([1, 2, 3], addTwo));
